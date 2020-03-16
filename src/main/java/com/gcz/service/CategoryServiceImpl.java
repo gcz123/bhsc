@@ -8,15 +8,23 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
 @Service
 @Transactional
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryDao categoryDao;
 
-    @Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
+    @Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
     @Override
-    public List<Category> showAll() {
-        return categoryDao.showAll();
+    public List<Category> pageShowAll(Integer page,Integer row) {
+
+        return categoryDao.showAll((page - 1) * row,row);
+    }
+
+    @Override
+    public Integer totalCount() {
+        Integer totalCount = categoryDao.totalCount();
+        return totalCount;
     }
 }

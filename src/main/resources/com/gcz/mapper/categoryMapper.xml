@@ -2,6 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.gcz.dao.CategoryDao">
     <select id="showAll" resultType="category">
-        select * from category
+        select id,name,parent_id parentId,grade from category limit #{page},#{row}
+    </select>
+    <select id="totalCount" resultType="Integer">
+        select count(id) from category
     </select>
 </mapper>

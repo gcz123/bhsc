@@ -10,8 +10,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>后台管理</title>
     <link rel="stylesheet" href="${path}/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="${path}/jqgrid/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="${path}/jqgrid/css/trirand/ui.jqgrid-bootstrap.css"/>
     <script rel="script" src="${path}/js/jquery-2.2.1.min.js"></script>
     <script rel="script" src="${path}/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script rel="script" src="${path}/jqgrid/js/trirand/i18n/grid.locale-cn.js"></script>
+    <script rel="script" src="${path}/jqgrid/js/trirand/src/jquery.jqGrid.js"></script>
 
 </head>
 <body>

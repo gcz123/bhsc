@@ -28,7 +28,7 @@ public class TestSsm {
 
     @Test
     public void test2(){
-        List<Category> categories = categoryService.showAll();
+        List<Category> categories = categoryService.pageShowAll(1,2);
         categories.forEach(s-> System.out.println("s = " + s));
     }
 }
